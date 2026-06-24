@@ -1,8 +1,9 @@
 const button = document.getElementById('TaskButton');
 button.addEventListener('click',function(e){
     e.preventDefault();
-    const taskText = button.value;
+    const taskText = document.getElementById('action').value;
     const newLi = document.createElement('li');
     newLi.textContent = taskText;
-    document.getElementById('taskList').appendChild('newLi');
-});
+    taskList.appendChild(newLi); 
+    const taskList=document.getElementById('taskList').appendChild('newLi');
+}); 
