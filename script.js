@@ -23,3 +23,8 @@ button.addEventListener('click',function(e){
    taskList.appendChild(deleteBtn);
     
 }); 
+ // 5. Create a delete button element
+        const deleteBtn = document.createElement('button');
+        deleteBtn.innerText = 'Delete';
+        deleteBtn.className = 'delete-btn';
+        
