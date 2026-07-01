@@ -23,8 +23,22 @@ button.addEventListener('click',function(e){
    taskList.appendChild(deleteBtn);
     
 }); 
- // 5. Create a delete button element
-        const deleteBtn = document.createElement('button');
-        deleteBtn.innerText = 'Delete';
-        deleteBtn.className = 'delete-btn';
-        
+// 1. Create the container item (e.g., a list item)
+const listItem = document.createElement("li");
+listItem.textContent = "Buy groceries ";
+
+// 2. Create the delete button
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "Delete";
+
+
+deleteBtn.addEventListener("click", function() {
+    listItem.remove(); // Removes the entire list item from the DOM
+});
+
+// 4. Append the button to the list item, and the item to your list
+listItem.appendChild(deleteBtn);
+document.getElementById("myList").appendChild(listItem);
+  
+
+    
